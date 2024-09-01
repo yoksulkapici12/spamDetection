@@ -5,7 +5,7 @@ from sklearn.naive_bayes import MultinomialNB
 import pickle
 
 # Load dataset and preprocess
-df = pd.read_csv("C:/kadirsen/API/spam_or_not_spam.csv", encoding='ISO-8859-1')
+df = pd.read_csv("example_path", encoding='ISO-8859-1')
 df.dropna(inplace=True)
 
 # Split the data
@@ -20,5 +20,5 @@ model = MultinomialNB()
 model.fit(X_train_count, Y_train)
 
 # Save the model and vectorizer using pickle
-pickle.dump(model, open("C:/kadirsen/API/model.pkl", "wb"))
-pickle.dump(cv, open("C:/kadirsen/API/vectorizer.pkl", "wb"))
+pickle.dump(model, open("example_path/model.pkl", "wb"))
+pickle.dump(cv, open("example_path/vectorizer.pkl", "wb"))
